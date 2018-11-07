@@ -4,4 +4,8 @@ class Driver {
     this.name = name
     this.startDate = new Date
   }
+
+  function yearsExperienceFromBeginningOf(year) {
+    return (startDate - year)
+  }
 }
