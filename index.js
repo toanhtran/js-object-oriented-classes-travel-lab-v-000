@@ -8,13 +8,11 @@ let eastWest = [
   '5th Avenue'
 ];
 
-
 class Driver {
   constructor(name, startDate) {
     this.name = name;
-    this.startDate = new Date;
+    this.startDate = new Date(startDate);
   }
-
   yearsExperienceFromBeginningOf(year) {
     let endDate = new Date(year, 1, 1);
     let totalYears = (endDate - this.startDate) / (365 * 24 * 60 * 60 * 1000);
@@ -36,7 +34,7 @@ class Route {
       this.avenueToInteger(this.beginningLocation.horizontal);
     let verticalDistance =
       this.endingLocation.vertical - this.beginningLocation.vertical;
-      return Math.abs(horizontalDistance) + Math.abs(verticalDistance);
+    return Math.abs(horizontalDistance) + Math.abs(verticalDistance);
   }
   estimatedTime(peak) {
     if (peak) {
