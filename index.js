@@ -6,6 +6,6 @@ class Driver {
   }
 
   function yearsExperienceFromBeginningOf(year) {
-    return (startDate - year)
+    return (startDate - year);
   }
 }
